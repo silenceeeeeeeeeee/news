@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="YOUen" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <h3 class="logo-heading">WORLDNEWS</h3>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <button class="btn btn-dark me-2" id="views-sort-btn">Sort by Views</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-dark me-2" id="date-sort-btn">Sort by Date</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-dark me-2" id="unsort-btn">Unsort</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-dark" id="color-btn">Switch to Dark Mode</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h2 class="mb-3 text-danger">Breaking News</h2>
+                <div class="card shadow-sm featured-article">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="hack.jpg" class="img-fluid" alt="Featured Article">
+                        </div>
+                        <div id="breaking-article" class="col-md-8 card-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="col-lg-8">
+                <h2 class="mb-4">Latest Articles</h2>
+                <div id="article-list" class="row">
+                </div>
+            </div>
+            <div class="col-lg-4 sidebar">
+                <h3 class="mb-3">Most Popular Article</h3>
+                <div id="popular-article" class="card shadow-sm">
+                    <div class="card-body">
+                        <p class="text-muted">No article selected</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-4">
+        <p>2025 WORLDNEWS</p>
+        <left><button class="btn btn-link" id="help-btn">Help</button></left>
+    </footer>
+    <div class="modal fade" id="helpModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Dashboard Guide</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                <li>Click any article to view details</li>
+                <li>Sort by date or views using the buttons</li>
+                <li>Toggle between light/dark mode</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
