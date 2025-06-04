@@ -18,16 +18,13 @@ function sortByDate() {
 }
 
 function sortByViews() {
-    let sorted = [...articles];
     if (descViews) {
-        sorted.sort((a, b) => b.views - a.views);
-        descViews = false;
+        articles.sort((a, b) => b.views - a.views);
+    } else {
+        articles.sort((a, b) => a.views - b.views);
     }
-    else {
-        sorted.sort((a, b) => a.views - b.views);
-        descViews = true;
-    }
-    outputArticles(sorted);
+    descViews = !descViews;
+    outputArticles(articles);
 }
 
 function outputArticles(articles) {
